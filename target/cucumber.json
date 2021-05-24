@@ -1,0 +1,274 @@
+[
+  {
+    "line": 4,
+    "elements": [
+      {
+        "start_timestamp": "2021-05-23T23:52:21.311Z",
+        "line": 7,
+        "name": "Creating a dataset id",
+        "description": "",
+        "id": "coxauto-api-workflow;creating-a-dataset-id",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 597000000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "a request is prepared to create new  dataset",
+            "match": {
+              "location": "com.apiProject.StepDefinitions.API_Steps.a_request_is_prepared_to_create_new_dataset()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1091000000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "a GET call is made to create a dataset",
+            "match": {
+              "location": "com.apiProject.StepDefinitions.API_Steps.a_GET_call_is_made_to_create_a_dataset()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 62000000,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "a status code for creating a dataset is 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 40
+                }
+              ],
+              "location": "com.apiProject.StepDefinitions.API_Steps.a_status_code_for_creating_a_dataset_is(java.lang.Integer)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 32000000,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "the dataset is created contains key \"datasetId\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"datasetId\"",
+                  "offset": 36
+                }
+              ],
+              "location": "com.apiProject.StepDefinitions.API_Steps.the_dataset_is_created_contains_key(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 625000000,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "the datasetID \"datasetId\" is stored in the global variable to be used for other calls",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"datasetId\"",
+                  "offset": 14
+                }
+              ],
+              "location": "com.apiProject.StepDefinitions.API_Steps.the_datasetID_is_stored_in_the_global_variable_to_be_used_for_other_calls(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@apiWorkflow"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-05-23T23:52:23.803Z",
+        "line": 15,
+        "name": "Retrieving all Vehicle IDs",
+        "description": "",
+        "id": "coxauto-api-workflow;retrieving-all-vehicle-ids",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "a request is prepared to get all vehicles list",
+            "match": {
+              "location": "com.apiProject.StepDefinitions.API_Steps.a_request_is_prepared_to_get_all_vehicles_list()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 188000000,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "a GET call is made to retrieve all vehicles",
+            "match": {
+              "location": "com.apiProject.StepDefinitions.API_Steps.a_GET_call_is_made_to_retrieve_all_vehicles()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "the status code of the request is 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 34
+                }
+              ],
+              "location": "com.apiProject.StepDefinitions.API_Steps.the_status_code_of_the_request_is(java.lang.Integer)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "it contains key \"vehicleIds\" and body that is list of vehicleIds",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"vehicleIds\"",
+                  "offset": 16
+                }
+              ],
+              "location": "com.apiProject.StepDefinitions.API_Steps.it_contains_key_and_body_that_is_list_of_vehiclesIds(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "the 6th id from the vehicles list is stored in the global variable to be used for other calls",
+            "match": {
+              "location": "com.apiProject.StepDefinitions.API_Steps.the_6th_id_from_the_vehicles_list_is_stored_in_the_global_variable_to_be_used_for_other_calls()"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@apiWorkflow"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-05-23T23:52:24.006Z",
+        "line": 22,
+        "name": "Retrieving the information about a specific vehicle",
+        "description": "",
+        "id": "coxauto-api-workflow;retrieving-the-information-about-a-specific-vehicle",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "a request is prepared to retrieve the vehicle information",
+            "match": {
+              "location": "com.apiProject.StepDefinitions.API_Steps.a_request_is_prepared_to_retrieve_the_vehicle_information()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1157000000,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "a GET call is made to retrieve the vehicle information",
+            "match": {
+              "location": "com.apiProject.StepDefinitions.API_Steps.a_GET_call_is_made_to_retrieve_the_vehicle_information()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "the status code for retrieving the updated employee is 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 55
+                }
+              ],
+              "location": "com.apiProject.StepDefinitions.API_Steps.the_status_code_for_retrieving_the_updated_employee_is(java.lang.Integer)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 31000000,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "the retrieved Vehicle_ID \"vehicleId\" matches the globally stored vehicle ID",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"vehicleId\"",
+                  "offset": 25
+                }
+              ],
+              "location": "com.apiProject.StepDefinitions.API_Steps.the_retrieved_Vehicle_ID_matches_the_globally_stored_vehicle_ID(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@apiWorkflow"
+          }
+        ]
+      }
+    ],
+    "name": "CoxAuto API Workflow",
+    "description": "  Description: This feature tests Cox Automotive API",
+    "id": "coxauto-api-workflow",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/API.feature",
+    "tags": [
+      {
+        "name": "@apiWorkflow",
+        "type": "Tag",
+        "location": {
+          "line": 3,
+          "column": 1
+        }
+      }
+    ]
+  }
+]
